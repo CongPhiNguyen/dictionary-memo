@@ -18,6 +18,17 @@ const Routers = () => {
             )
           );
         })}
+        {routes.commonRoute.map((route, index) => {
+          return (
+            route.element && (
+              <Route
+                key={route.path}
+                path={route.path}
+                element={route.element}
+              />
+            )
+          );
+        })}
         {routes.protectedRoute.map((route, index) => {
           return (
             route.element && (
