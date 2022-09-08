@@ -5,11 +5,10 @@ const PORT = process.env.PORT || 5000; // port number
 const app = express();
 const route = require("./routers/index"); // router impl
 const bodyParser = require("body-parser");
+var cookieParser = require("cookie-parser");
 
-app.use(
-  cors()
-  //  { credentials: true, origin: "http://localhost:3000" }
-);
+app.use(cookieParser());
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
