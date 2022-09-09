@@ -1,9 +1,9 @@
 const express = require("express");
 const cors = require("cors");
-const connectDB = require("./config/dbConfig.js"); // connect MongoDB
+const connectDB = require("./src/config/dbConfig.js"); // connect MongoDB
 const PORT = process.env.PORT || 5000; // port number
 const app = express();
-const route = require("./routers/index"); // router impl
+const route = require("./src/routers/index"); // router impl
 const bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 
